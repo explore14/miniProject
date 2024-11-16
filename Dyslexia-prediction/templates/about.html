@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- <title>Kiddy &mdash; Website Template by Colorlib</title> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+
+
+      <header class="site-navbar site-navbar-target" role="banner">
+
+        <div class="container mb-3">
+          <div class="d-flex align-items-center">
+            <div class="site-logo mr-auto">
+              <a href="home.html">Explore...!!!<span class="text-primary">.</span></a>
+            </div>
+          
+              
+            </div>
+          </div>
+        
+
+
+        <div class="container">
+          <div class="menu-wrap d-flex align-items-center">
+            <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
+
+              
+
+              <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav mr-auto ">
+                  <li><a href="home.html" class="nav-link">Home</a></li>
+                  <li class="active"><a href="about.html" class="nav-link">About</a></li>
+                  <li><a href="survey.html" class="nav-link">Survey</a></li>
+                  <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                  <li><a href="predict.html" class="nav-link">Predict</a></li>
+                 
+                </ul>
+              </nav>
+
+              
+          </div>
+        </div>
+
+       
+
+      </header>
+
+    <div class="ftco-blocks-cover-1">
+       <!-- data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')" -->
+      <!-- <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')"> -->
+        <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('{{ url_for('static', filename='images/hero_1.jpg') }}')">
+        <div class="container">
+          <div class="row align-items-center ">
+
+            <div class="col-md-5 mt-5 pt-5">
+              <span class="text-cursive h5 text-red">Welcome To Our Website</span>
+              <h1 class="mb-3 font-weight-bold text-teal">About Us</h1>
+              <p><a href="home.html" class="text-white">Home</a> <span class="mx-3">/</span> <strong>About</strong></p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{{url_for('static',filename='images/img_1.jpg')}}" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-5 ml-auto pl-md-5">
+            <!-- <span class="text-cursive h5 text-red">About Us</span> -->
+            <h3 class="text-black">What is Dyslexia ? </h3>
+            <p><span>Dyslexia is a different way of processing information, not a limitation. Embrace your strengths and overcome challenges with patience and empowerment. Together, let's redefine success and celebrate diversity in learning.  </span></p>
+            <!-- <p class="mt-5"><a href="#" class="btn btn-warning py-4 btn-custom-1">More About Us</a></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-teal">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5 section-2-title">
+          <div class="col-md-6">
+            <!-- <span class="text-cursive h5 text-red">The Team</span> -->
+            <h3 class="text-white text-center">Meet The Team</h3>
+            <!-- <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt nemo vel earum maxime neque!</p> -->
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1 teal">
+              
+                <img src="{{url_for('static',filename='images/person_1.jpg')}}" alt="Image"
+                 class="img-fluid">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">Guide</span>
+                <h2>K.Sindhura </h2>
+                <p>Assist.Proff (M.Tech)</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1 yellow">
+              
+              <!-- pic of sathwika -->
+                <img src="{{url_for('static',filename='images/person_2.jpg')}}" alt="Image" 
+                 class="img-fluid">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">21251A0521</span>
+                <h2>Sathwika Puskur</h2>
+                <p>CSE-A</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1 red">
+              
+              <!-- pic of mann -->
+                <img src="{{url_for('static',filename='images/person_3.jpg')}}" alt="Image" 
+                 class="img-fluid">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">21251A0542</span>
+                <h2>Manaswini Gurrapu</h2>
+                <p>CSE-A</p>
+              </div>
+            </div>
+          </div>
+       </div>
+       <div class="row align-items-stretch justify-content-center">
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1 green">
+
+              <!-- pic of varsha -->
+                <img src="{{url_for('static',filename='images/person_4.jpg')}}" alt="Image" 
+                 class="img-fluid" style="height: 100px;">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">21251A0565</span>
+                <h2>Varsha Pallam</h2>
+                <p>CSE-A</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1 blue">
+               <!-- pic of samhita -->
+                <img src="{{url_for('static',filename='images/person_5.jpg')}}" alt="Image"
+                 class="img-fluid" style="height: 100px;">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">22255A0501</span>
+                <h2>Samhita Kalapatapu</h2>
+                <p>CSE-A</p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+         
+
+
+        
+      
+    
+    
+    
+    
+          
+
+    
+
+    
+          
+
+              
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.0.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='main.js') }}">
+    
+    </script>
+  </body>
+
+</html>
+

@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Kiddy &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+
+
+      <header class="site-navbar site-navbar-target" role="banner">
+
+        <div class="container mb-3">
+          <div class="d-flex align-items-center">
+            <div class="site-logo mr-auto">
+              <a href="home.html">QUIZ<span class="text-primary">.</span></a>
+            </div>
+            <div class="site-quick-contact d-none d-lg-flex ml-auto ">
+
+              
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container">
+          <div class="menu-wrap d-flex align-items-center">
+            <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
+
+              
+
+              <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav mr-auto ">
+                  <li><a href="home.html" class="nav-link">Home</a></li>
+                  <li><a href="about.html" class="nav-link">About</a></li>
+                  <li><a href="survey.html" class="nav-link">Survey</a></li>
+                  <li class="active"><a href="quiz.html" class="nav-link">Quiz</a></li>
+                  <li><a href="predict.html" class="nav-link">Predict</a></li>
+                </ul>
+              </nav>
+          </div>
+        </div>
+
+       
+
+      </header>
+      <style>
+        .question {
+            background-color: #bebde4; /* Set your desired background color here */
+            padding: 10px; /* Add padding for spacing */
+            border-radius: 5px; /* Add border-radius for rounded corners */
+        }
+    </style>
+
+ 
+    <div class="ftco-blocks-cover-1">
+       <!-- data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')" -->
+       <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('{{ url_for('static', filename='images/hero_1.jpg') }}')">
+        <div class="container">
+          <div class="row align-items-center ">
+
+            <div class="col-md-5 mt-5 pt-5">   
+              <h1 class="mb-3 font-weight-bold text-teal">Quiz Round</h1>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <span class="text-cursive h5 text-red d-block">ALL THE BEST JUNIOR!!</span>
+            <h5 class="text-black">This quiz is specially designed for students to test if they are dyslexic or not. Students are
+              advised to attempt all the questions patiently under the surveillance of an elder.</h5> 
+          </div>
+        </div>
+        <!-- <div class="parallax1">
+          <div id="warning">
+              <centre> This quiz is specially designed for students to test if they are dyslexic or not. Students are
+                  advised to attempt all the questions patiently under the surveillance of an elder.<br>
+                  </centre>
+          </div>
+      </div> -->
+      <div class="main">
+          <form name="quiz" method="post" action="quiz.php">
+              <div class="question">
+                  <span id="question">
+                      Question 1
+                  </span><br><br>
+                  <div class="content" onclick="q1score()">
+                     <span class="text-bold h6 text-black" >Check whether these two alphabets are same or not?</span><br><br>
+                      <img src="{{url_for('static',filename='o.png')}}" width=100 height=100><img src="{{url_for('static',filename='0.jpeg')}}" width=100 height=100><br>
+                      <input type="radio" id="q1a" name="q1" value="4">
+                      <label for="q1a">Yes</label><br>
+                      <input type="radio" id="q1b" name="q1" value="0">
+                      <label for="q1b">No</label><br>
+                  </div>
+                </div>
+                  <br>
+                  <div class="question">
+                  <span id="question">
+                      Question 2
+                  </span><br><br>
+                  <div class="content" onclick="q2score()">
+                    <span class="text-bold h6 text-black" > Guess the fruit in the picture below.</span><br><br>
+                      <img src="{{url_for('static',filename='grapes.jpeg')}}" width=350 height=250><br>
+                      <input type="radio" id="q2a" name="q2" value="4">
+                      <label for="q2a">Grapes</label><br>
+                      <input type="radio" id="q2b" name="q2" value="0">
+                      <label for="q2b">Orange</label><br>
+                      <input type="radio" id="q2c" name="q2" value="0">
+                      <label for="q2c">Banana</label><br>
+                      <input type="radio" id="q2d" name="q2" value="0">
+                      <label for="q2d">Mango</label><br>
+                  </div></div>
+                  <br>
+  
+                  <div class="question">
+                  <span id="question">
+                      Question 3
+                  </span><br><br>
+                  <div class="content" onclick="q3score()">
+                    <span class="text-bold h6 text-black" > Check whether these two alphabets are same or not?</span><br><br>
+                      <img src="{{url_for('static',filename='g.jpg')}}" width=100 height=100><img src="{{url_for('static',filename='s.jpeg')}}" width=100 height=100><br>
+                      <input type="radio" id="q3a" name="q3" value="0">
+                      <label for="q3a">Yes</label><br>
+                      <input type="radio" id="q3b" name="q3" value="4">
+                      <label for="q3b">No</label><br>
+                  </div></div>
+                  <br>
+
+                  
+                  <div class="question">
+                  <span id="question">
+                      Question 4
+                  </span><br><br>
+                  <div class="content" onclick="q4score()">
+                    <span class="text-bold h6 text-black" >   What is the smaller version of this letter?</span><br><br>
+                      <img src="{{url_for('static',filename='b.png')}}"width=100 height=100><br>
+                      <input type="radio" id="q4a" name="q4" value="0">
+                      <label for="q4a">d</label><br>
+                      <input type="radio" id="q4b" name="q4" value="4">
+                      <label for="q4b">b</label><br>
+                  </div></div>
+                  <br>
+  
+                  <div class="question">
+                   <span id="question">
+                      Question 5
+                  </span><br><br>
+                  <div class="content" onclick="q5score()">
+                    <span class="text-bold h6 text-black">What do you hear?<span class="text-bold h6 text-black" ></span><br><br>
+                      <audio controls>
+                          <source src="{{url_for('static',filename='s.mp3')}}"type="audio/mp3">
+                      </audio><br><br>
+                      <input type="radio" id="q5a" name="q5" value="0">
+                      <label for="q5a">F</label><br>
+                      <input type="radio" id="q5b" name="q5" value="4">
+                      <label for="q5b">S</label><br>
+                  </div></div>
+                  <br> 
+  
+
+                  <div class="question">
+                  <span id="question">
+                      Question 6
+                  </span><br><br>
+                  <div class="content" onclick="q6score()">
+                    <span class="text-bold h6 text-black" > What do you see in the picture?</span><br><br>
+                      <img src="{{url_for('static',filename='god.jpeg')}}" width=300 height=200><br><br>
+                      <input type="radio" id="q6a" name="q6" value="0">
+                      <label for="q6a">DOG</label><br>
+                      <input type="radio" id="q6b" name="q6" value="4">
+                      <label for="q6b">GOD</label><br>
+                  </div></div>
+                  <br>
+  
+
+                  <div class="question">
+                  <span id="question">
+                      Question 7
+                  </span><br><br>
+                  <div class="content"  onclick="q7score()">
+                    <span class="text-bold h6 text-black" >  Which hand is left and Which hand is right?</span><br><br>
+                      <img src="{{url_for('static',filename='right.jpeg')}}" width=300 height=200><img src="{{url_for('static',filename='left.jpeg')}}" width=300 height=200><br><br>
+                      <input type="radio" id="q7a" name="q7" value="4">
+                      <label for="q7a">First one is right and next one is
+                          left</label><br>
+                      <input type="radio" id="q7b" name="q7" value="0">
+                      <label for="q7b">First one is left and next one is
+                          right</label><br>
+                  </div></div>
+                  <br>
+  
+                  <div class="question">
+                  <span id="question">
+                      Question 8
+                  </span><br><br>
+                  <div class="content" onclick="q8score()">
+                    <span class="text-bold h6 text-black" > What is the smaller version of this letter?</span><br><br>
+                      <img src="{{url_for('static',filename='N.png')}}"width=100 height=100><br>
+                      <input type="radio" id="q8a" name="q8" value="4">
+                      <label for="q8a">n</label><br>
+                      <input type="radio" id="q8b" name="q8" value="0">
+                      <label for="q8b">m</label><br>
+                  </div></div>
+                  <br>
+                  
+                     
+                  <div class="question">
+                  <span id="question">
+                      Question 9
+                  </span><br><br>
+                  <div class="content"  onclick="q9score()">
+                    <span class="text-bold h6 text-black" >What do you hear?</span><br><br>
+                      <audio controls>
+                          <source src="{{url_for('static',filename='catShort.mp3')}}" type="audio/mp3">
+                      </audio><br><br>
+                      <input type="radio" id="q9a" name="q9" value="4">
+                      <label for="q9a">Cat have short tail</label><br>
+                      <input type="radio" id="q9b" name="q9" value="0">
+                      <label for="q9b">Cat have long tail</label><br>
+                      
+                  </div></div>
+                  <br>
+                  
+  
+                  
+                   
+                      
+                  <div class="question">
+                  <span id="question">
+                      Question 10
+                  </span><br><br>
+                  <div class="content" onclick="q10score()">
+                    <span class="text-bold h6 text-black" > Guess the fruit in the picture below.</span><br><br>
+                      <img src="{{url_for('static',filename='Guava.png')}}" width=350 height=250><br>
+                      <input type="radio" id="q10a" name="q10" value="0">
+                      <label for="q10a">Grapes</label><br>
+                      <input type="radio" id="q10b" name="q10" value="0">
+                      <label for="q10b">Pineapple</label><br>
+                      <input type="radio" id="q10c" name="q10" value="0">
+                      <label for="q19c">Banana</label><br>
+                      <input type="radio" id="q10d" name="q10" value="4">
+                      <label for="q10d">Guava</label><br>
+                  </div></div>
+                  <br>
+                  
+
+                  <div class="question">
+                  <span id="question">
+                      Question 11
+                  </span><br><br>
+                  <div class="content"  onclick="q11score()">
+                    <span class="text-bold h6 text-black" >  What do you hear?</span><br><br>
+                      <audio controls>
+                          <source src="{{url_for('static',filename='studio.mp3')}}" type="audio/mp3">
+                      </audio><br><br>
+                      <input type="radio" id="q11a" name="q11" value="4">
+                      <label for="q11a">Studio</label><br>
+                      <input type="radio" id="q11b" name="q11" value="0">
+                      <label for="q11b">Audio</label><br>
+                      <input type="radio" id="q11c" name="q11" value="0">
+                      <label for="q11c">Video</label><br>
+                      <input type="radio" id="q11d" name="q11" value="0">
+                      <label for="q11d">radio</label><br>
+                  </div></div>
+                  <br>
+
+
+                  <div class="question">
+                  <span id="question">
+                      Question 12
+                  </span><br><br>
+                  <div class="content" onclick="q12score()">
+                    <span class="text-bold h6 text-black" >  Which letter LION starts with?</span><br><br>
+                      <img src="{{url_for('static',filename='lion.jpg')}}" width=400 height=300><br>
+                      <input type="radio" id="q12a" name="q12" value="4">
+                      <label for="q12a">L</label><br>
+                      <input type="radio" id="q12b" name="q12" value="0">
+                      <label for="q12b">I</label><br>
+                      <input type="radio" id="q12c" name="q12" value="0">
+                      <label for="q12c">J</label><br>
+                  </div></div>
+                  <br>
+
+                  
+                  <div class="question">
+                   <span id="question">
+                      Question 13
+                  </span><br><br>
+                  <div class="content" onclick="q13score()">
+                    <span class="text-bold h6 text-black" > What do you see in the picture?</span><br><br>
+                      <img src="{{url_for('static',filename='dogP.jpg')}}" width=300 height=200><br><br>
+                      <input type="radio" id="q13a" name="q13" value="0">
+                      <label for="q13a">kitten</label><br>
+                      <input type="radio" id="q13b" name="q13" value="4">
+                      <label for="q13b">puppy</label><br>
+                  </div></div>
+                  <br>
+
+
+
+                  <div class="question">
+                  <span id="question">
+                      Question 14
+                  </span><br><br>
+                  <div class="content" onclick="q14score()">
+                    <span class="text-bold h6 text-black" > Guess the fruit in the picture below.</span><br><br>
+                      <img src="{{url_for('static',filename='strawberry.png')}}" width=350 height=250><br>
+                      <input type="radio" id="q14a" name="q14" value="0">
+                      <label for="q14a">Grapes</label><br>
+                      <input type="radio" id="q14b" name="q14" value="0">
+                      <label for="q14b">apple</label><br>
+                      <input type="radio" id="q14c" name="q14" value="4">
+                      <label for="q14c">Strawberry</label><br>
+                      <input type="radio" id="q14d" name="q14" value="0">
+                      <label for="q14d">Mango</label><br>
+                  </div></div>
+                  <br>
+                  <br>
+                  
+                  <div class="question">
+                  <span id="question">
+                      Question 15
+                  </span><br><br>
+                  <div class="content"  onclick="q15score()">
+                    <span class="text-bold h6 text-black" >What do you hear?</span><br><br>
+                      <audio controls>
+                          <source src="{{url_for('static',filename='add.mp3')}}" type="audio/mp3">
+                      </audio><br><br>
+                      <input type="radio" id="q15a" name="q15" value="4">
+                      <label for="15a">Add</label><br>
+                      <input type="radio" id="q15b" name="q15" value="0">
+                      <label for="q15b">Sad</label><br>
+                      <input type="radio" id="q15c" name="q15" value="0">
+                      <label for="q15c">Mad</label><br>
+                      <input type="radio" id="q15d" name="q15" value="0">
+                      <label for="q15d">Bad</label><br>
+                  </div></div>
+                  <br>
+                  
+
+                  <div class="question">
+                  <span id="question">
+                      Question 16
+                  </span><br><br>
+                  <div class="content" onclick="q16score()">
+                    <span class="text-bold h6 text-black" >Check whether these two alphabets are same or not?</span><br><br>
+                      <img src="{{url_for('static',filename='i.png')}}" width=100 height=100><img src="{{url_for('static',filename='L.png')}}" width=100 height=100><br>
+                      <input type="radio" id="q16a" name="q16" value="4">
+                      <label for="q16a">Yes</label><br>
+                      <input type="radio" id="q16b" name="q16" value="0">
+                      <label for="q16b">No</label><br>
+                  </div></div>
+                  <br>
+
+                  <div class="question">
+                  <span id="question">
+                      Question 17
+                  </span><br><br>
+                  <div class="content" onclick="q17score()">
+                    <span class="text-bold h6 text-black" >Guess the fruit in the picture below.</span><br><br>
+                      <img src="{{url_for('static',filename='pineapple.png')}}" width=350 height=250><br>
+                      <input type="radio" id="q17a" name="q17" value="0">
+                      <label for="q17a">Grapes</label><br>
+                      <input type="radio" id="q17b" name="q17" value="0">
+                      <label for="q17b">Pineapple</label><br>
+                      <input type="radio" id="q17c" name="q17" value="4">
+                      <label for="q17c">Banana</label><br>
+                      <input type="radio" id="q17d" name="q17" value="0">
+                      <label for="q17d">Cherry</label><br>
+                  </div></div>
+                  <br>
+
+                  <div class="question">
+                  <span id="question">
+                      Question 18
+                  </span><br><br>
+                  <div class="content"  onclick="q18score()">
+                    <span class="text-bold h6 text-black" > What do you hear?</span><br><br>
+                      <audio controls>
+                          <source src="{{url_for('static',filename='dogColor.mp3')}}" type="audio/mp3">
+                      </audio><br><br>
+                      <input type="radio" id="q18a" name="q18" value="0">
+                      <label for="q18a">Dog color is White</label><br>
+                      <input type="radio" id="q18b" name="q18" value="4">
+                      <label for="q18b">Dog color is Black</label><br>
+                      
+                  </div></div>
+                  <br>
+
+                  <div class="question">
+                  <span id="question">
+                      Question 19
+                  </span><br><br>
+                  <div class="content"  onclick="q19score()">
+                    <span class="text-bold h6 text-black" >What do you hear?</span><br><br>
+                      <audio controls>
+                          <source src="{{url_for('static',filename='well.mp3')}}" type="audio/mp3">
+                      </audio><br><br>
+                      <input type="radio" id="q19a" name="q19" value="0">
+                      <label for="q19a">Bell</label><br>
+                      <input type="radio" id="q19b" name="q19" value="4">
+                      <label for="q19b">Well</label><br>
+                      <input type="radio" id="q19c" name="q19" value="0">
+                      <label for="q19c">Fall</label><br>
+                      <input type="radio" id="q19d" name="q19" value="0">
+                      <label for="q19d">Call</label><br>
+                  </div></div>
+                  
+                  <br>
+                  <div class="question">
+                  <span id="question">
+                      Question 20
+                  </span><br><br>
+                  <div class="content" onclick="q20score()">
+                    <span class="text-bold h6 text-black" >Guess the fruit in the picture below.</span><br><br>
+                      <img src="{{url_for('static',filename='Papaya.png')}}" width=350 height=250><br>
+                      <input type="radio" id="q20a" name="q20" value="0">
+                      <label for="q20a">Grapes</label><br>
+                      <input type="radio" id="q20b" name="q20" value="4">
+                      <label for="q20b">Papaya</label><br>
+                      <input type="radio" id="q20c" name="q20" value="0">
+                      <label for="q20c">Banana</label><br>
+                      <input type="radio" id="q20d" name="q20" value="0">
+                      <label for="q20d">Guava</label><br>
+                  </div></div>
+                  
+                  <br>
+                  <div class="question">
+                   <span id="question">
+                      Question 21
+                  </span><br><br>
+                  <div class="content" onclick="q21score()">
+                    <span class="text-bold h6 text-black" >What do you see in the picture?</span><br><br>
+                      <img src="{{url_for('static',filename='catP.jpg')}}" width=300 height=200><br><br>
+                      <input type="radio" id="q21a" name="q21" value="4">
+                      <label for="q21a">kitten</label><br>
+                      <input type="radio" id="q21b" name="q21" value="0">
+                      <label for="q21b">puppy</label><br>
+                  </div></div>
+                  
+              <br>
+              <div class="question">
+              <span id="question">
+                  Question 22
+              </span><br><br>
+              <div class="content" onclick="q22score()">
+                <span class="text-bold h6 text-black" >What is the smaller version of this letter?</span><br><br>
+                  <img src="{{url_for('static',filename='L.png')}}"width=100 height=100><br>
+                  <input type="radio" id="q22a" name="q22" value="4">
+                  <label for="q22a">l</label><br>
+                  <input type="radio" id="q22b" name="q22" value="0">
+                  <label for="q22b">i</label><br>
+              </div></div>
+              
+              <br>
+              <div class="question">
+              <span id="question">
+                  Question 23
+              </span><br><br>
+              <div class="content" onclick="q23score()">
+                <span class="text-bold h6 text-black" > What is this?</span><br><br>
+                  <video src="{{url_for('static',filename='car.mp4')}}" width="300" height="200" controls>
+                      Your browser does not support the video tag.
+                    </video>
+                    <br>
+                    
+                  <input type="radio" id="q23a" name="q23" value="4">
+                  <label for="q23a">Car</label><br>
+                  <input type="radio" id="q23b" name="q23" value="0">
+                  <label for="q23b">Train</label><br>
+              </div></div>
+              
+              <br>
+              <div class="question">
+              <span id="question">
+                      Question 24
+                  </span><br><br>
+                  <div class="content"  onclick="q24score()">
+                    <span class="text-bold h6 text-black" >who is the king of Jungal</span><br><br>
+                      <audio controls>
+                          <source src="{{url_for('static',filename='kingLion.mp3')}}" type="audio/mp3">
+                      </audio><br><br>
+                      <input type="radio" id="q24a" name="q24" value="0">
+                      <label for="q24a">Tiger</label><br>
+                      <input type="radio" id="q24b" name="q24" value="4">
+                      <label for="q24b">Lion</label><br>
+                      
+                  </div></div>
+
+
+                  <br>
+                  <div class="question">
+                    <span id="question">
+                    Question 25
+                    </span><br><br>
+                    <div class="content" onclick="q25score()">
+                      <span class="text-bold h6 text-black" >  What is the smaller version of this letter?</span><br><br>
+                    <img src="{{url_for('static',filename='V.png')}}"width=100 height=100><br>
+                    <input type="radio" id="q25a" name="q25" value="4">
+                    <label for="q25a">v</label><br>
+                    <input type="radio" id="q25b" name="q25" value="0">
+                    <label for="q25b">w</label><br>
+      </div></div>
+      <br>
+
+
+
+                     
+                     
+              <!-- <span id="button" onclick="submitscore()">SUBMIT</span> -->
+              </div>
+          </form>
+      </div>
+      <div class="footer">
+          
+      </div>
+  
+      </div>
+    </div>
+    
+    <div class="site-section py-5 bg-warning">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 d-flex">
+          <h2 class="text-white m-0">Click on Submit</h2>
+          <a href="predict.html" class="btn btn-primary btn-custom-1 py-3 px-5 ml-auto" onclick="submitscore()">Submit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.0.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='quiz.js') }}">
+    </script>
+
+  </body>
+
+</html>

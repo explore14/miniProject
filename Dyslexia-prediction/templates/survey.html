@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Kiddy &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+
+
+      <header class="site-navbar site-navbar-target" role="banner">
+
+        <div class="container mb-3">
+          <div class="d-flex align-items-center">
+            <div class="site-logo mr-auto">
+              <a href="home.html">Survey<span class="text-primary">.</span></a>
+            </div>
+            <div class="site-quick-contact d-none d-lg-flex ml-auto ">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container">
+          <div class="menu-wrap d-flex align-items-center">
+            <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
+
+              
+
+              <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav mr-auto ">
+                  <li><a href="home.html" class="nav-link">Home</a></li>
+                  <li><a href="about.html" class="nav-link">About</a></li>
+                  <li class="active"><a href="survey.html" class="nav-link">Survey</a></li>
+                  <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                  <li><a href="predict.html" class="nav-link">Predict</a></li>
+                  <!-- <li><a href="contact.html" class="nav-link">Contact</a></li> -->
+                </ul>
+              </nav>
+
+            
+          </div>
+        </div>
+
+       
+
+      </header>
+
+    <div class="ftco-blocks-cover-1">
+       <!-- data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')" -->
+       <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('{{ url_for('static', filename='images/hero_1.jpg') }}')">
+
+        <div class="container">
+          <div class="row align-items-center ">
+
+            <div class="col-md-5 mt-5 pt-5">
+              <span class="text-cursive h5 text-red">Welcome To Our Website</span>
+              <h1 class="mb-3 font-weight-bold text-teal">Survey</h1>
+              <p><a href="home.html" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Survey</strong></p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <style>
+      .question {
+          background-color: #87aab7; /* Set your desired background color here */
+          padding: 10px; /* Add padding for spacing */
+          border-radius: 5px; /* Add border-radius for rounded corners */
+      }
+  </style>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <h5 class="text-bold h5 text-red"><center> This survey is especially designed for parents and teachers to test if their child/student is dyslexic or not. This survey is based on your keen observation towards your child/student.</center></h5><br>
+              <div class="question">
+                  <span id="question1">Question 1</span><br>
+                  <div class="content" onclick="q1score()">
+                    <span class = "text-bold h6 text-black"> Did your child struggle to learn to count?</span><br>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" id="q1a" name="q1" value="0">
+                          <label class="form-check-label" for="q1a">Yes-frequently</label><br>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" id="q1b" name="q1" value="2">
+                          <label class="form-check-label" for="q1b">Sometimes</label><br>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" id="q1c" name="q1" value="4">
+                          <label class="form-check-label" for="q1c">No-never</label><br>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <div class="question">
+                  <span id="question2">Question 2</span><br>
+                  <div class="content" onclick="q2score()">
+                    <span class = "text-bold h6 text-black">  Does your child still count on his fingers past third grade?</span><br>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" id="q2a" name="q2" value="0">
+                          <label class="form-check-label" for="q2a">Yes-frequently</label><br>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" id="q2b" name="q2" value="2">
+                          <label class="form-check-label" for="q2b">Sometimes</label><br>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" id="q2c" name="q2" value="4">
+                          <label class="form-check-label" for="q2c">No-never</label><br>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <div class="question">
+                  <span id="question3">Question 3</span><br>
+                  <div class="content" onclick="q3score()">
+                    <span class = "text-bold h6 text-black"> Reads and rereads with little comprehension?</span><br>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" id="q3a" name="q3" value="0">
+                          <label class="form-check-label" for="q3a">Yes</label><br>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" id="q3b" name="q3" value="4">
+                          <label class="form-check-label" for="q3b">No</label><br>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" id="q3c" name="q3" value="2">
+                          <label class="form-check-label" for="q3c">Unknown</label><br>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <div class="question">
+                <span id="question4">Question 4</span><br>
+                <div class="content" onclick="q4score()">
+                  <span class = "text-bold h6 text-black"> Difficulty putting thoughts into words; speaks in halting phrases; leaves sentences incomplete?</span><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="q4a" name="q4" value="0">
+                        <label class="form-check-label" for="q4a">Yes</label><br>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="q4b" name="q4" value="4">
+                        <label class="form-check-label" for="q4b">No</label><br>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="q4c" name="q4" value="2">
+                        <label class="form-check-label" for="q4c">Unknown</label><br>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="question">
+              <span id="question5">Question 5</span><br>
+              <div class="content" onclick="q5score()">
+                <span class = "text-bold h6 text-black">  Is his spelling ability poor? Letters missed, reversed etc?</span><br>
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" id="q5a" name="q5" value="0">
+                      <label class="form-check-label" for="q5a">Yes</label><br>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" id="q5b" name="q5" value="4">
+                      <label class="form-check-label" for="q5b">No</label><br>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" id="q5c" name="q5" value="2">
+                      <label class="form-check-label" for="q5c">Unknown</label><br>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <div class="question">
+            <span id="question6">Question 6</span><br>
+            <div class="content" onclick="q6score()">
+              <span class = "text-bold h6 text-black"> Is there difficulty telling time on a clock with hands and/or tying shoes with laces?</span><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="q6a" name="q6" value="0">
+                    <label class="form-check-label" for="q6a">Yes</label><br>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="q6b" name="q6" value="4">
+                    <label class="form-check-label" for="q6b">No</label><br>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="q6c" name="q6" value="2">
+                    <label class="form-check-label" for="q6c">Unknown</label><br>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="question">
+          <span id="question7">Question 7</span><br>
+          <div class="content" onclick="q7score()">
+            <span class = "text-bold h6 text-black"> When reading out loud, does your child repeat words, mix up letters, 
+                    or change word order without noticing?</span><br>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" id="q7a" name="q7" value="0">
+                  <label class="form-check-label" for="q7a">Yes</label><br>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" id="q7b" name="q7" value="4">
+                  <label class="form-check-label" for="q7b">No</label><br>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" id="q7c" name="q7" value="2">
+                  <label class="form-check-label" for="q7c">Unknown</label><br>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="question">
+        <span id="question8">Question 8</span><br>
+        <div class="content" onclick="q8score()">
+          <span class = "text-bold h6 text-black">  After reading a passage, is your child unable to give a summary or discuss key points with you?</span><br>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="q8a" name="q8" value="0">
+                <label class="form-check-label" for="q8a">Yes</label><br>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="q8b" name="q8" value="4">
+                <label class="form-check-label" for="q8b">No</label><br>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="q8c" name="q8" value="2">
+                <label class="form-check-label" for="q8c">Unknown</label><br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="question">
+      <span id="question9">Question 9</span><br>
+      <div class="content" onclick="q9score()">
+        <span class = "text-bold h6 text-black">   Is your child of average or above-average intelligence, but seems unable to read at her grade level?</span><br>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" id="q9a" name="q9" value="0">
+              <label class="form-check-label" for="q9a">Yes</label><br>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" id="q9b" name="q9" value="4">
+              <label class="form-check-label" for="q9b">No</label><br>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" id="q9c" name="q9" value="2">
+              <label class="form-check-label" for="q9c">Unknown</label><br>
+          </div>
+      </div>
+  </div>
+  <br>
+  <div class="question">
+    <span id="question10">Question 10</span><br>
+    <div class="content" onclick="q10score()">
+      <span class = "text-bold h6 text-black"> Does your child avoid reading altogether, or does she get easily frustrated when 
+                    completing reading-related assignments?</span><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" id="q10a" name="q10" value="0">
+            <label class="form-check-label" for="q10a">Yes</label><br>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" id="q10b" name="q10" value="4">
+            <label class="form-check-label" for="q10b">No</label><br>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" id="q10c" name="q10" value="2">
+            <label class="form-check-label" for="q10c">Unknown</label><br>
+        </div>
+    </div>
+</div>
+<br>
+<div class="question">
+  <span  id="question11">Question 11</span><br>
+  <div class="content" onclick="q11score()">
+    <span class = "text-bold h6 text-black">  Does your child have difficulty sustaining attention? Does she space out or get labeled a “daydreamer"?</span><br>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" id="q11a" name="q11" value="0">
+          <label class="form-check-label" for="q11a">Yes</label><br>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" id="q11b" name="q11" value="4">
+          <label class="form-check-label" for="q11b">No</label><br>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" id="q11c" name="q11" value="2">
+          <label class="form-check-label" for="q11c">Unknown</label><br>
+      </div>
+  </div>
+</div>
+<br>
+<div class="question">
+  <span id="question11">Question 12</span><br>
+  <div class="content" onclick="q12score()">
+   <span class = "text-bold h6 text-black"> Does your child have trouble organizing what he or she wants to say or thinking of 
+                    the word he or she needs when writing or in conversation?</span><br>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" id="q12a" name="q12" value="0">
+          <label class="form-check-label" for="q12a">Yes</label><br>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" id="q12b" name="q12" value="4">
+          <label class="form-check-label" for="q12b">No</label><br>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" id="q12c" name="q12" value="2">
+          <label class="form-check-label" for="q12c">Unknown</label><br>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <br>
+
+
+    <div class="site-section py-5 bg-warning">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 d-flex">
+          <h2 class="text-white m-0">Bring Fun Life To Your Kids</h2>
+          <a href="quiz.html" id="button" class="btn btn-primary btn-custom-1 py-3 px-5 ml-auto" onclick="submitscore()" >Submit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.0.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='survey.js') }}">
+    </script>
+  </body>
+
+</html>
+
